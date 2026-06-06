@@ -1,0 +1,30 @@
+stage1_pretrain:
+  max_steps: 100000
+  batch_size: 32
+  lr: 1.0e-4
+  weight_decay: 0.01
+  grad_clip: 1.0
+  log_every: 100
+  save_every: 5000
+  dataset: wikitext-2-raw-v1
+
+stage2_classifier:
+  max_steps: 20000
+  batch_size: 64
+  lr: 1.0e-4
+  dataset: yelp_polarity   # or your style dataset
+
+stage3_finetune:
+  max_steps: 50000
+  batch_size: 32
+  lr: 5.0e-5
+  lambda_embed: 0.01
+  lambda_style: 0.1
+  p_uncond: 0.1
+  grad_clip: 1.0
+
+common:
+  seed: 42
+  device: cuda
+  num_workers: 4
+  checkpoint_dir: ./checkpoints

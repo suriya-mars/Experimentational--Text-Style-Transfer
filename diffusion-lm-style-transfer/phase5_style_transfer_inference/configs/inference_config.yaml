@@ -1,0 +1,7 @@
+inference:
+  mode: partial          # partial (SDEdit) | full (pure generation)
+  t_frac: 0.5            # noise fraction for partial mode (0.3 = conservative, 0.7 = aggressive)
+  ddim_steps: 50
+  guidance_type: cfg     # cfg | classifier
+  guidance_scale: 3.0
+  device: cuda

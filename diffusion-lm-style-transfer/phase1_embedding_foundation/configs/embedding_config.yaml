@@ -1,0 +1,10 @@
+embedding:
+  tokenizer_name: bert-base-uncased
+  embed_dim: 128
+  max_seq_len: 64
+  padding_idx: 0
+
+rounding:
+  temperature: 1.0
+  # "hard" at inference, "soft" during training steps
+  mode: soft
