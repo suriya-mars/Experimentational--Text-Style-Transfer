@@ -1,0 +1,11 @@
+evaluation:
+  target_label: 1          # 0=negative, 1=positive for sentiment transfer
+  style_classifier: textattack/bert-base-uncased-yelp-polarity
+  fluency_model: gpt2
+  bert_score_lang: en
+  output_path: ./outputs/eval_results.json
+
+data:
+  source_file: ./data/processed/test_source.txt
+  output_file: ./outputs/transferred.txt
+  max_samples: 500

@@ -1,0 +1,8 @@
+diffusion:
+  T: 2000
+  schedule: cosine       # cosine | linear
+  # cosine schedule params
+  cosine_s: 0.008
+  # linear schedule params (ignored if cosine)
+  beta_start: 1.0e-4
+  beta_end: 0.02

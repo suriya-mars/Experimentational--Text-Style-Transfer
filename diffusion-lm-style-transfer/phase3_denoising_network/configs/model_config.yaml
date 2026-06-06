@@ -1,0 +1,9 @@
+model:
+  embed_dim: 128
+  n_layers: 12
+  n_heads: 8
+  dropout: 0.1
+  style_dim: 256       # set to null to disable cross-attention conditioning
+
+time_embedding:
+  hidden_dim: 512      # MLP hidden size = embed_dim * 4 by default

@@ -1,0 +1,15 @@
+style_encoder:
+  backbone: bert-base-uncased
+  out_dim: 256
+  freeze_backbone: true
+
+classifier:
+  hidden_dim: 256
+  num_styles: 2        # e.g., positive / negative for sentiment transfer
+
+classifier_guidance:
+  guidance_scale: 3.0
+
+cfg:
+  p_uncond: 0.1        # probability of dropping condition during training
+  guidance_scale: 3.0  # w in (1+w)*cond - w*uncond
